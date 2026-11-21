@@ -12,7 +12,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 ASSETS = os.path.join(BASE, "assets")
-OUT = os.path.join(BASE, "entry.png")
+OUT = os.path.join(os.environ.get("MAKEFUN_OUTPUT_DIR", BASE), "entry.png")
 
 W, H = 1024, 1024
 PAPER = (247, 242, 231)
